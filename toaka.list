@@ -1,0 +1,1 @@
+deb [signed-by=/etc/apt/trusted.gpg.d/toaka-ppa.gpg] https://Toaka-Labs.github.io/toaka-ppa ./
