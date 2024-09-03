@@ -1,6 +1,7 @@
 name: Update debian/12/arm64 PPA
 
 on:
+    workflow_dispatch:
     push:
         paths:
             - debian/12/arm64/**
