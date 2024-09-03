@@ -1,0 +1,36 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Date: Tue, 03 Sep 2024 22:29:18 +0000
+MD5Sum:
+ e80792b0f4fc06da839932ee9fbf86af              484 Packages
+ 241f391d8f9914cbee63e7c81294a536              375 Packages.gz
+ 0e3c6a99c646f125df1673fe8aa79035               38 Release
+SHA1:
+ 0ffd0707429e5733382f564433c668fd6020e7e5              484 Packages
+ 690e0573ac25dbe7d8799159d315ad8bb669f156              375 Packages.gz
+ 143b1f5ab03c2ac47cd109dfef151b7e90d0562c               38 Release
+SHA256:
+ a09291f85b9c6972aba33d7a75b72dd993e0e7fec8aca3c5c40eea1fa07b5760              484 Packages
+ 2bbd55b1399daaa0b6d779df9a59efdca012e4b4838332e528b2de99ea4460ae              375 Packages.gz
+ a1c14a132b42571ac0ae8782c017fa476eb180b929179a6abc290b6d0f463475               38 Release
+SHA512:
+ 3f906e89eb1bc84995d2d193fe2373d4314ac2aa096b8d358cc8b8ad532727c21b6c3fd1e614e1c1d6339680852658dfe4aacea3fb96ee6bec538349251d2105              484 Packages
+ 7cde620c51fcb36493babb9092fd7eaafc176ac1a4087dd6f91ed7f38f819905b7653b310f20d66bdf39855cc2473b674602708eba01f7c84a0ef663601df661              375 Packages.gz
+ 7de420a3123dfaeff7c1de30d9c0b807b53f2b3e98775063228dbb99d12d1b903102b1f2cdc1461b94e5a54b3793d6e48378996706431f91fab3b2af2228c4dd               38 Release
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCgAdFiEERbH1NlA7RUNtmgrRlJ5oHwjEjn0FAmbXjb4ACgkQlJ5oHwjE
+jn2iVhAAh2o0Du4g6FXCdCORmtRqWpLDKkMo4C8hwY17mixGV7EfXP04k8s+Pn/5
+o+20Nl3Zp9lUTmkMVsDWP7NxL93xcaKsw1dwrtopqbHeuUAVBZX+1EA/ICs6CLLK
+6nY5PaT147bbDnvJLAi/s3NNSgMliDvwQw7sR9cB4zl8Wzbp4k3HF01x8T0Y5XOW
+mQMQBTSybVjahfU82hAwboZWRAVqNGLLgRSCL5VsUanXcwoKE2xVyXgsiMbFgDKR
+fXGrWWho/L14dhdfZFHwBu+qhaW/nb/Px9+qTqMB98igqjfzRsPmjUxolXir4b2h
+48il8iD211Llwh/CQ4Q5IbRCjcDERFvqkvlj2vF6dNJHQP/XXY52zz93iAiT56dH
+FSkXo+UCaM5N8ZByx21gqLZx0hb1MH/lvg0rOUnL1qy03TVoHUsm2+IkYf2sgOFe
+GP8sgc/UaGN+ZH0S9n38Y/ZRRsSIT0ZoxdYjtnINqCE+QD9SVpp8lQEAjFsic9gV
+vYm5b2Dw7ejvh9evqd+xkcyvKrNPQpbONByQDTEAkQW5JoGePwDyLViHjnwbZiIA
+HXvbNNzbM3ElNmEukbcb2be5T38/6OenAakhaGwwH4IK3wczki9Ehr+O9FMx35IS
+kdXOqeteJUF/KQeeqnBtpW8r3ryo8dLzN/Ts+Cw2J24dZ+9jo+E=
+=G2CC
+-----END PGP SIGNATURE-----
