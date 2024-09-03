@@ -6,7 +6,7 @@ on:
             - debian/12/amd64/**
 
 jobs:
-    update-debian-12-amd64-ppa:
+    update-ppa-debian-12-amd64:
         runs-on: ubuntu-latest
         permissions:
             contents: write
