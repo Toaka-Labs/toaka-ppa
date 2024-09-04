@@ -1,0 +1,93 @@
+name: Update All PPA Repos
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - debian/**
+      - ubuntu/**
+
+jobs:
+  update-all-ppa-repos:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      -
+        name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      -
+        name: Path Filtering
+        uses: dorny/paths-filter@v3
+        id: filter
+        with:
+          filters: |
+            debian_12_amd64:
+              - 'debian/12/amd64/**''
+            debian_12_arm64:
+              - 'debian/12/arm64/**'
+            ubuntu_24_amd64:
+              - 'ubuntu/24/amd64/**'
+            ubuntu_24_arm64:
+              - 'ubuntu/24/arm64/**'
+      -
+        name: Import GPG Signing Key
+        run: |
+          echo -n "$GPG_SIGNING_KEY" | base64 --decode | gpg --import
+        env:
+          GPG_SIGNING_KEY: ${{ secrets.GPG_SIGNING_KEY }}
+      -
+        name: Update debian/12/amd64 PPA Details
+        if: steps.filter.outputs.debian_12_amd64 == 'true'
+        working-directory: debian/12/amd64
+        run: |
+          rm -f Packages; dpkg-scanpackages --multiversion . > Packages
+          rm -f Packages.gz; gzip -k -f Packages
+          rm -f Release; apt-ftparchive release . > Release
+          rm -f Release.gpg; gpg -abs -o - Release > Release.gpg
+          rm -f InRelease; gpg --clearsign -o - Release > InRelease
+      -
+        name: Update debian/12/arm64 PPA Details
+        if: steps.filter.outputs.debian_12_arm64 == 'true'
+        working-directory: debian/12/arm64
+        run: |
+          rm -f Packages; dpkg-scanpackages --multiversion . > Packages
+          rm -f Packages.gz; gzip -k -f Packages
+          rm -f Release; apt-ftparchive release . > Release
+          rm -f Release.gpg; gpg -abs -o - Release > Release.gpg
+          rm -f InRelease; gpg --clearsign -o - Release > InRelease
+      -
+        name: Update ubuntu/24/amd64 PPA Details
+        if: steps.filter.outputs.ubuntu_24_amd64 == 'true'
+        working-directory: ubuntu/24/amd64
+        run: |
+          rm -f Packages; dpkg-scanpackages --multiversion . > Packages
+          rm -f Packages.gz; gzip -k -f Packages
+          rm -f Release; apt-ftparchive release . > Release
+          rm -f Release.gpg; gpg -abs -o - Release > Release.gpg
+          rm -f InRelease; gpg --clearsign -o - Release > InRelease
+      -
+        name: Update ubuntu/24/arm64 PPA Details
+        if: steps.filter.outputs.ubuntu_24_arm64 == 'true'
+        working-directory: ubuntu/24/arm64
+        run: |
+          rm -f Packages; dpkg-scanpackages --multiversion . > Packages
+          rm -f Packages.gz; gzip -k -f Packages
+          rm -f Release; apt-ftparchive release . > Release
+          rm -f Release.gpg; gpg -abs -o - Release > Release.gpg
+          rm -f InRelease; gpg --clearsign -o - Release > InRelease
+      -
+        name: Commit Updates
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add debian/ ubuntu/
+          git commit -m "AUTOMATED PPA FILE UPDATE"
+      -
+        name: Push Updates
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
