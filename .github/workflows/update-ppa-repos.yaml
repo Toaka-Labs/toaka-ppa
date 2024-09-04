@@ -1,7 +1,6 @@
 name: Update All PPA Repos
 
 on:
-  workflow_dispatch:
   push:
     paths:
       - debian/**
