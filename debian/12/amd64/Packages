@@ -17,22 +17,3 @@ Description: John's hello package
  .
  It is awesome.
 
-Package: hello
-Version: 5.0.1-1
-Architecture: amd64
-Maintainer: John Doe <john@doe.com>
-Installed-Size: 23
-Depends: libc6 (>= 2.34)
-Filename: ./hello_5.0.1-1_amd64.deb
-Size: 2596
-MD5sum: 54b2208098e777deb48503461a89775a
-SHA1: 9739183956d1565fa20a4229bae1cd31a0236265
-SHA256: 2f7d62b6c2490c51b7a58f84dc1cc5afe08db4ce3e13d80ea84e286bd53942d2
-Section: devel
-Priority: optional
-Description: John's hello package
- John's package is written in C
- and prints a greeting.
- .
- It is awesome.
-
