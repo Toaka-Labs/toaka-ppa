@@ -83,7 +83,7 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add debian/ ubuntu/
-          git commit -m "AUTOMATED PPA FILE UPDATE"
+          git commit -m "[bot] AUTOMATED PPA FILE UPDATE"
       -
         name: Push Updates
         uses: ad-m/github-push-action@master
